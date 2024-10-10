@@ -12,7 +12,6 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await axios.get('frontend-laravel-hvgvfwe8czadcxg5.canadacentral-01.azurewebsites.net/api/test');
-        console.log(response.data.message);
         setData(response.data.message); // Giả sử API trả về đoạn text trực tiếp
       } catch (err) {
         setError(err);
@@ -32,7 +31,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Text from frontend: Hello world!
+          Text from frontend: Hello world!!!
         </p>
         <p>
           Response from api backend: {data}
