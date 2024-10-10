@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('frontend-laravel-hvgvfwe8czadcxg5.canadacentral-01.azurewebsites.net/api/test');
+        const response = await axios.get('https://frontend-laravel-hvgvfwe8czadcxg5.canadacentral-01.azurewebsites.net/api/test');
         setData(response.data.message); // Giả sử API trả về đoạn text trực tiếp
       } catch (err) {
         setError(err);
