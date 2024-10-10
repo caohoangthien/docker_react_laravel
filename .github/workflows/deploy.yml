@@ -36,7 +36,7 @@ jobs:
     - name: Deploy to Azure Web App frontend
       uses: azure/webapps-deploy@v2
       with:
-        app-name: frontend-react
+        app-name: front-react
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_REACT }}
         images: thien.azurecr.io/react:latest
 
