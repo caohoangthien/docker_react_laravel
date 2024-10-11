@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test', function () {
-    return response()->json(['message' => 'This is text from api !!']);
+    return response()->json(['message' => 'This is text from api !!!!!']);
 });
