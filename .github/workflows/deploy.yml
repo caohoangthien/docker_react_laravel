@@ -26,23 +26,23 @@ jobs:
     - name: Build and push Docker image frontend
       run: |
         docker build --no-cache -t thien.azurecr.io/react:${{ github.sha }} ./react
-        docker push thien.azurecr.io/react:latest
+        docker push thien.azurecr.io/react:${{ github.sha }}
 
     - name: Build and push Docker image backend
       run: |
         docker build --no-cache -t thien.azurecr.io/laravel:${{ github.sha }} ./laravel
-        docker push thien.azurecr.io/laravel:latest
+        docker push thien.azurecr.io/laravel:${{ github.sha }}
 
     - name: Deploy to Azure Web App frontend
       uses: azure/webapps-deploy@v2
       with:
         app-name: front-react
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_REACT }}
-        images: thien.azurecr.io/react:latest
+        images: thien.azurecr.io/react:${{ github.sha }}
 
     - name: Deploy to Azure Web App backend
       uses: azure/webapps-deploy@v2
       with:
         app-name: frontend-laravel
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_LARAVEL }}
-        images: thien.azurecr.io/laravel:latest
+        images: thien.azurecr.io/laravel:${{ github.sha }}
