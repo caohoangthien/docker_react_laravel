@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test', function () {
-    return response()->json(['message' => 'This is response from api laravel.']);
+    return response()->json(['message' => 'This is response from api laravel 9.']);
 });
