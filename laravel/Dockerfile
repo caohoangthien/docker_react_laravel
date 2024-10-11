@@ -1,4 +1,4 @@
-# Sử dụng image PHP với AÂpche
+# Sử dụng image PHP với  apache
 FROM php:7.4-apache
 
 # Cài đặt các phần mở rộng cần thiết
